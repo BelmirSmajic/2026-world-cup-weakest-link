@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>2026 World Cup Weakest-Link Analysis</title>
-  <meta name="description" content="An answer-first case study showing how lineup-floor value relates to World Cup group-stage performance.">
+  <meta name="description" content="An answer-first case study showing how lineup-floor value relates to World Cup group-stage points, goal difference, and advancement.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -25,17 +25,18 @@
       <div class="hero-copy">
         <p class="eyebrow">2026 World Cup analytical case study</p>
         <h1>A Team Is Only as Strong as the Bottom of Its Lineup</h1>
-        <p class="subhead">The weakest starters had a stronger relationship with World Cup performance than the biggest stars.</p>
-        <p class="lede">Across 48 teams and 528 players, I measured each team's lineup floor using the average value of its three least-valued regular players.</p>
+        <p class="subhead">The weakest regular starters had a stronger relationship with group-stage results than the biggest stars.</p>
+        <p class="lede">Across 48 teams and 528 players, I measured each team's lineup floor using the average value of the three least-valued players within its most-used group-stage XI.</p>
         <div class="hero-actions">
           <a class="button primary" href="#evidence">See the evidence</a>
           <a class="button" href="methodology.html">Read methodology</a>
         </div>
       </div>
       <div class="hero-panel answer-panel" aria-label="Primary result">
-        <span>Bottom-three value vs points</span>
+        <span>Teams with stronger lineup floors generally earned more points</span>
         <strong>0.77</strong>
-        <span>Spearman relationship across 48 teams</span>
+        <p>This was a strong positive relationship across the 48 teams, not a guarantee.</p>
+        <span>Spearman correlation across 48 teams</span>
       </div>
     </section>
 
@@ -50,15 +51,16 @@
       <div class="section-heading">
         <p class="eyebrow">The idea</p>
         <h2>Total value can hide a thin lineup floor.</h2>
+        <p>The analysis tested how lineup floor related to group-stage points, group-stage goal difference, and advancement to the knockout stage.</p>
       </div>
       <div class="explain-grid">
         <article>
           <strong>Core XI</strong>
-          <p>Soccer teams field 11 players. Here, Core XI means the 11 players with the largest tournament roles, based on minutes, starts, and appearances.</p>
+          <p>Soccer teams field 11 players. Here, Core XI means a retrospective, usage-based XI: the 11 players with the largest actual group-stage roles, prioritized by minutes, then starts, then appearances.</p>
         </article>
         <article>
           <strong>Lineup floor</strong>
-          <p>Lineup floor means the average market value of the three least-valued players in that Core XI. It asks how strong the recurring weak points are.</p>
+          <p>Lineup floor means the average market value of the three least-valued players within that Core XI. It is not the three cheapest players in the full squad or the cheapest players who appeared briefly.</p>
         </article>
         <article>
           <strong>Why it matters</strong>
@@ -82,7 +84,7 @@
     <section class="section">
       <div class="section-heading">
         <p class="eyebrow">Signal comparison</p>
-        <h2>The weakest three carried more performance signal than the biggest three.</h2>
+        <h2>The weakest three carried more results signal than the biggest three.</h2>
         <p>Spearman correlation compares rank order. A higher value indicates a stronger tendency for teams with higher player values to earn more points.</p>
       </div>
       <article class="chart-card wide compact-card">
@@ -100,6 +102,36 @@
         <div id="scatter-chart" class="chart scatter"></div>
       </article>
       <p class="chart-note">The trend line summarizes the observed relationship in this sample. It should not be read as a causal model or a prediction engine.</p>
+    </section>
+
+    <section class="section contrast-section">
+      <div class="section-heading">
+        <p class="eyebrow">Illustrative contrasts</p>
+        <h2>Where lineup floor saw something total value missed.</h2>
+        <p>These two teams do not prove the thesis on their own. They show why the aggregate pattern is useful: total Core XI value and regular-lineup depth can tell different stories.</p>
+      </div>
+      <div class="contrast-grid">
+        <article class="contrast-card">
+          <strong>Mexico</strong>
+          <p>Total value made Mexico look weaker than its regular lineup depth suggested.</p>
+          <dl>
+            <div><dt>Total Core XI value rank</dt><dd>31st</dd></div>
+            <div><dt>Lineup-floor rank</dt><dd>16th</dd></div>
+            <div><dt>Group-stage points</dt><dd>9</dd></div>
+            <div><dt>Result</dt><dd>Advanced</dd></div>
+          </dl>
+        </article>
+        <article class="contrast-card">
+          <strong>Uruguay</strong>
+          <p>Uruguay's overall talent looked stronger than the bottom of its regular lineup.</p>
+          <dl>
+            <div><dt>Total Core XI value rank</dt><dd>14th</dd></div>
+            <div><dt>Lineup-floor rank</dt><dd>22nd</dd></div>
+            <div><dt>Group-stage points</dt><dd>2</dd></div>
+            <div><dt>Result</dt><dd>Eliminated</dd></div>
+          </dl>
+        </article>
+      </div>
     </section>
 
     <section class="section" id="examples">
@@ -132,11 +164,11 @@
         </article>
         <article>
           <strong>The build</strong>
-          <p>Reconstructed 48 Core XIs, matched 528 players to valuation data, standardized values in USD, and created a bottom-three lineup-floor metric.</p>
+          <p>Reconstructed 48 usage-based Core XIs from actual group-stage minutes, starts, and appearances; matched 528 players to valuation data; standardized values in USD; and created a bottom-three lineup-floor metric.</p>
         </article>
         <article>
           <strong>The result</strong>
-          <p>Achieved a complete validated dataset and found that lineup-floor value had a stronger observed relationship with points than total value or star value.</p>
+          <p>Among the measures tested, lineup floor had the strongest observed relationship with group-stage results and advancement to the knockout stage.</p>
         </article>
       </div>
       <blockquote>Analyzed 528 players across 48 World Cup teams to develop a lineup-floor metric that correlated 0.771 with group-stage points, exceeding total XI value at 0.719 and top-three star value at 0.699.</blockquote>

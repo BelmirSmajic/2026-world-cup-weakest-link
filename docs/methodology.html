@@ -22,11 +22,11 @@
       <p class="eyebrow">Methodology</p>
       <h1>How the lineup-floor metric was built</h1>
       <div class="method-list">
-        <article><h2>1. Core XI reconstruction</h2><p>Players were ranked within each team by minutes, starts, appearances, and a deterministic name tie-breaker. The top 11 formed the Core XI.</p></article>
+        <article><h2>1. Core XI reconstruction</h2><p>For each country, I reconstructed its most-used XI from actual group-stage participation. Players were prioritized by minutes, then starts, then appearances, with a deterministic name tie-breaker only if needed. This is a retrospective usage-based XI, not a pre-tournament projected lineup.</p></article>
         <article><h2>2. Player valuation</h2><p>FootballTransfers was the primary source. FotMob/SciSports was the first fallback. Transfermarkt and manually verified indexed records filled final gaps. Source flags remain in the dataset.</p></article>
         <article><h2>3. Currency conversion</h2><p>EUR values were converted to USD using the established rate: 1 EUR = 1.1406 USD. Full precision is retained in the CSV files.</p></article>
-        <article><h2>4. Weakest-link calculation</h2><p>Each Core XI was ranked by USD player value. The main metric is the average value of the three lowest-valued Core XI players.</p></article>
-        <article><h2>5. Performance comparison</h2><p>Lineup-floor value, total Core XI value, top-three average value, and lineup imbalance were compared with points, goal difference, group position, and advancement.</p></article>
+        <article><h2>4. Weakest-link calculation</h2><p>Each Core XI was ranked by USD player value. The main metric is the average value of the three lowest-valued players within those 11 players only. It does not use the three cheapest players in the full squad or the cheapest players who appeared for any number of minutes.</p></article>
+        <article><h2>5. Results comparison</h2><p>Lineup-floor value, total Core XI value, top-three average value, and lineup imbalance were compared with group-stage points, group-stage goal difference, group position, and advancement to the knockout stage.</p></article>
       </div>
     </section>
     <section class="section">

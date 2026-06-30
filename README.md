@@ -1,22 +1,20 @@
 # 2026 World Cup Weakest-Link Analysis
 
-**Created by Belmir Smajic**
-
 **Thesis:** A national team's lowest-valued Core XI starters may reveal lineup fragility that total lineup value and star-player value can conceal.
 
 [View the GitHub Pages case study](https://BelmirSmajic.github.io/2026-world-cup-weakest-link/)
 
 ## Executive Summary
 
-This project reconstructs a Core XI for all 48 teams in the 2026 World Cup field, assigns a player-value field to all 528 selected players, and tests whether the bottom three Core XI players by value are associated with group-stage performance.
+This project reconstructs a retrospective, usage-based Core XI for all 48 teams in the 2026 World Cup field, assigns a player-value field to all 528 selected players, and tests whether the bottom three Core XI players by value are associated with group-stage results.
 
 The final dataset is complete: **528 of 528 players valued**, **48 of 48 teams complete**, **0 missing values**, **0 duplicate team-player rows**, and **0 USD conversion errors**.
 
-The primary metric is **bottom-three Core XI average value in USD**, a lineup-floor measure intended to capture how exposed a team may be once play moves past its stars.
+The primary metric is **bottom-three Core XI average value in USD**, a lineup-floor measure intended to capture how exposed a team may be once play moves past its stars. For each country, I reconstructed its most-used XI from actual group-stage minutes, starts, and appearances. I then averaged the market values of the three least-valued players within that XI. The metric therefore represents the bottom of the team's regular group-stage lineup, not the cheapest players in the full squad.
 
 ## Business Question
 
-Does a team's lineup floor track World Cup performance better than total lineup value or star-player value?
+Does a team's lineup floor track group-stage points, goal difference, and knockout advancement better than total lineup value or star-player value?
 
 In portfolio terms, this is a sports analytics version of a depth-risk question: is the weakest part of a system more informative than its headline strength?
 
@@ -54,16 +52,16 @@ Advancement by bottom-three value quartile:
 | Q3 | 12 | 83.3% | 4.67 | 1.58 | $2.53M |
 | Strongest quartile | 12 | 91.7% | 6.58 | 4.25 | $16.14M |
 
-The results should be read as association, not causation. Player value is a proxy for talent, demand, and market context; it is not a deterministic match model.
+Among the measures tested, lineup floor had the strongest observed relationship with group-stage results and advancement to the knockout stage. The results should be read as association, not causation. Player value is a proxy for talent, demand, and market context; it is not a deterministic match model.
 
 ## Methodology
 
-1. Reconstructed a Core XI for each team using minutes, starts, appearances, and deterministic tie-breaking.
+1. Reconstructed a retrospective Core XI for each team using actual group-stage minutes, starts, appearances, and deterministic tie-breaking.
 2. Joined each Core XI player to a valuation source.
 3. Converted EUR values to USD using `1 EUR = 1.1406 USD`.
 4. Ranked each team's Core XI by player value.
-5. Calculated lineup-floor metrics: bottom-one value, bottom-three average, bottom-three total, lineup imbalance, and value shares.
-6. Compared these metrics with group-stage points, goal difference, group position, and advancement.
+5. Calculated lineup-floor metrics from within the Core XI only: bottom-one value, bottom-three average, bottom-three total, lineup imbalance, and value shares.
+6. Compared these metrics with group-stage points, goal difference, group position, and advancement to the knockout stage.
 
 ## Dataset And Validation
 
@@ -105,7 +103,7 @@ Limitations:
 - Mixed valuation models across sources.
 - Some fallback values have unverified valuation dates.
 - Core XI is reconstructed from available tournament usage data.
-- Player value is a market proxy, not a causal performance variable.
+- Player value is a market proxy, not a causal driver of group-stage results.
 - Exact low-end rankings should be interpreted as broad tiers.
 
 ## GitHub Pages
