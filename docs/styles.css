@@ -47,13 +47,21 @@ nav a:hover { color: var(--text); }
   padding: clamp(3rem, 7vw, 7rem) clamp(1rem, 5vw, 5rem);
 }
 .hero h1, .page h1 {
-  max-width: 12ch;
+  max-width: 13ch;
   margin: .4rem 0 1rem;
-  font-size: 5.5rem;
+  font-size: 5rem;
   line-height: .92;
   letter-spacing: 0;
 }
 .page h1 { max-width: 16ch; font-size: 4.2rem; }
+.subhead {
+  max-width: 48rem;
+  margin: 0 0 .8rem;
+  color: var(--text);
+  font-size: 1.65rem;
+  line-height: 1.25;
+  font-weight: 800;
+}
 .lede { max-width: 43rem; color: var(--muted); font-size: 1.25rem; }
 .eyebrow {
   color: var(--accent-2);
@@ -77,7 +85,7 @@ nav a:hover { color: var(--text); }
   font-weight: 700;
 }
 .button.primary { background: var(--accent); border-color: var(--accent); color: #06111d; }
-.hero-panel, .note-card, .tableau-card, .chart-card, .metric-grid article, .download-grid a {
+.hero-panel, .note-card, .chart-card, .metric-grid article, .download-grid a, .explain-grid article, .story-grid article, .table-card {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.015));
@@ -86,6 +94,7 @@ nav a:hover { color: var(--text); }
 .hero-panel { padding: 1.5rem; display: grid; gap: .35rem; }
 .hero-panel strong { font-size: 4.5rem; line-height: 1; color: var(--accent); }
 .hero-panel span { color: var(--muted); }
+.answer-panel { align-self: stretch; align-content: center; }
 .metric-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -102,16 +111,36 @@ nav a:hover { color: var(--text); }
 .section-heading { max-width: 48rem; margin-bottom: 1.5rem; }
 .section h2 { max-width: 22ch; margin: 0 0 1rem; font-size: 3rem; line-height: 1; }
 .section p { max-width: 60rem; color: var(--muted); }
+.explain-grid, .story-grid, .table-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.table-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.explain-grid article, .story-grid article, .table-card { padding: 1rem; }
+.explain-grid strong, .story-grid strong, .note-card strong { display: block; margin-bottom: .35rem; color: var(--text); }
+.case-story blockquote {
+  max-width: 68rem;
+  margin: 1.25rem 0 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--accent);
+  background: rgba(71, 194, 255, .08);
+  color: var(--text);
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
 .chart-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
 .chart-card { padding: 1rem; min-height: 24rem; }
+.compact-card { min-height: 14rem; }
+.scatter-card { min-height: 30rem; }
 .chart-card.wide { grid-column: 1 / -1; }
 .chart-card h3 { margin: 0 0 1rem; }
 .chart { min-height: 18rem; }
-.bar-row {
+.bar-row, .quartile-row, .correlation-row {
   display: grid;
   grid-template-columns: minmax(7rem, 11rem) 1fr minmax(4rem, 6rem);
   gap: .75rem;
@@ -119,22 +148,38 @@ nav a:hover { color: var(--text); }
   margin: .55rem 0;
   color: var(--muted);
 }
+.quartile-row { grid-template-columns: minmax(10rem, 15rem) 1fr minmax(4rem, 5rem); }
+.correlation-row { grid-template-columns: minmax(12rem, 16rem) 1fr minmax(4rem, 5rem); }
+.quartile-row strong, .correlation-row strong { display: block; color: var(--text); }
+.quartile-row span, .correlation-row span { display: block; font-size: .88rem; }
+.quartile-row b, .correlation-row b { color: var(--text); text-align: right; }
 .bar-track { height: .8rem; background: #0a0e14; border-radius: 2px; overflow: hidden; }
 .bar-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
 .bar-row strong { color: var(--text); font-size: .9rem; }
 .chart-svg { width: 100%; min-height: 21rem; overflow: visible; }
+.scatter-svg { min-height: 28rem; }
 .axis, .tick { stroke: var(--line); }
+.grid { stroke: var(--line); opacity: .55; }
 .dot { fill: var(--accent); opacity: .82; }
 .dot.advanced { fill: var(--accent-2); }
 .label { fill: var(--muted); font-size: 12px; }
+.axis-label { font-size: 11px; }
+.axis-title { fill: var(--text); font-size: 14px; font-weight: 700; }
+.trend-line { stroke: var(--warn); stroke-width: 2; stroke-dasharray: 6 5; }
+.team-label { fill: var(--text); font-size: 12px; font-weight: 800; paint-order: stroke; stroke: var(--bg); stroke-width: 4px; }
+.chart-note {
+  margin-top: .8rem;
+  color: var(--muted);
+}
+.legend .label { font-size: 12px; }
 .split {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(18rem, .8fr);
   gap: 1.5rem;
   align-items: start;
 }
-.note-card, .tableau-card { padding: 1.25rem; }
-.tableau-card { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.note-card { padding: 1.25rem; }
+.methodology-note .note-card { max-width: 70rem; }
 .method-list { display: grid; gap: 1rem; max-width: 65rem; }
 .method-list article { border-top: 1px solid var(--line); padding-top: 1rem; }
 .clean-list { color: var(--muted); }
@@ -146,6 +191,11 @@ nav a:hover { color: var(--text); }
 }
 .download-grid a { display: grid; gap: .4rem; padding: 1rem; text-decoration: none; }
 .download-grid span { color: var(--muted); }
+table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+th, td { padding: .7rem .55rem; border-bottom: 1px solid var(--line); text-align: left; }
+th { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
+td { color: var(--text); }
+td:nth-child(3), td:nth-child(4) { white-space: nowrap; }
 footer {
   display: flex;
   gap: 1rem;
@@ -156,7 +206,7 @@ footer {
   color: var(--muted);
 }
 @media (max-width: 850px) {
-  .hero, .split, .chart-grid, .download-grid { grid-template-columns: 1fr; }
+  .hero, .split, .chart-grid, .download-grid, .explain-grid, .story-grid, .table-grid { grid-template-columns: 1fr; }
   .hero h1 { font-size: 4.25rem; }
   .page h1 { font-size: 3.25rem; }
   .metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -166,9 +216,14 @@ footer {
 @media (max-width: 520px) {
   .hero h1 { font-size: 3rem; }
   .page h1 { font-size: 2.5rem; }
+  .subhead { font-size: 1.25rem; }
   .lede { font-size: 1.1rem; }
   .hero-panel strong, .metric-grid strong { font-size: 2.6rem; }
   .section h2 { font-size: 2rem; }
   .metric-grid { grid-template-columns: 1fr; }
-  .bar-row { grid-template-columns: 1fr; gap: .35rem; }
+  .bar-row, .quartile-row, .correlation-row { grid-template-columns: 1fr; gap: .35rem; }
+  .quartile-row b, .correlation-row b { text-align: left; }
+  .chart-card { padding: .75rem; }
+  table { font-size: .86rem; }
+  th, td { padding: .55rem .35rem; }
 }

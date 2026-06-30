@@ -67,7 +67,7 @@ The results should be read as association, not causation. Player value is a prox
 
 Published CSV files:
 
-- `data/tableau_world_cup_weakest_link.csv`: player-level Tableau-ready dataset.
+- `data/player_level_analysis.csv`: player-level analysis dataset.
 - `data/team_rankings.csv`: final ranking tables.
 - `data/source_mix_sensitivity_summary.csv`: source-mix sensitivity result.
 - `data/final_value_validation_report.csv`: validation checks.
@@ -106,10 +106,6 @@ Limitations:
 - Player value is a market proxy, not a causal performance variable.
 - Exact low-end rankings should be interpreted as broad tiers.
 
-## Tableau
-
-A Tableau Public dashboard link can be added here after publication. The Tableau-ready CSV is already included in `data/tableau_world_cup_weakest_link.csv`.
-
 ## GitHub Pages
 
 The case-study site is designed for GitHub Pages from the `/docs` folder:
@@ -126,7 +122,7 @@ https://BelmirSmajic.github.io/2026-world-cup-weakest-link/
 |-- data/
 |   |-- raw/
 |   |-- reference/
-|   |-- tableau_world_cup_weakest_link.csv
+|   |-- player_level_analysis.csv
 |   |-- team_rankings.csv
 |   |-- source_mix_sensitivity_summary.csv
 |   `-- final_value_validation_report.csv
