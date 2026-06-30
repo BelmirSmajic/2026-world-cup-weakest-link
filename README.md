@@ -1,5 +1,7 @@
 # 2026 World Cup Weakest-Link Analysis
 
+**Created by Belmir Smajic**
+
 **Thesis:** A national team's lowest-valued Core XI starters may reveal lineup fragility that total lineup value and star-player value can conceal.
 
 [View the GitHub Pages case study](https://BelmirSmajic.github.io/2026-world-cup-weakest-link/)
