@@ -1,0 +1,61 @@
+ranking,rank,team,value,points,goal_difference,advanced_flag,notes
+highest_bottom_three_value,1,England,45167760.0,7,4,True,bottom_3_average_value_usd
+highest_bottom_three_value,2,France,26690040.0,9,8,True,bottom_3_average_value_usd
+highest_bottom_three_value,3,Germany,21177140.0,6,6,True,bottom_3_average_value_usd
+highest_bottom_three_value,4,Spain,19390200.0,7,5,True,bottom_3_average_value_usd
+highest_bottom_three_value,5,Netherlands,18629800.0,7,6,True,bottom_3_average_value_usd
+highest_bottom_three_value,6,Portugal,14067400.0,5,5,True,bottom_3_average_value_usd
+highest_bottom_three_value,7,Argentina,10037280.0,9,7,True,bottom_3_average_value_usd
+highest_bottom_three_value,8,Norway,9428960.0,6,1,True,bottom_3_average_value_usd
+highest_bottom_three_value,9,Türkiye,9428960.0,3,-2,False,bottom_3_average_value_usd
+highest_bottom_three_value,10,Morocco,9352920.0,7,3,True,bottom_3_average_value_usd
+lowest_bottom_three_value,1,IR Iran,117500.4298,3,0,False,bottom_3_average_value_usd
+lowest_bottom_three_value,2,Curaçao,141080.814,1,-8,False,bottom_3_average_value_usd
+lowest_bottom_three_value,3,Cabo Verde,197062.60259999998,3,0,True,bottom_3_average_value_usd
+lowest_bottom_three_value,4,New Zealand,202478.5516,1,-6,False,bottom_3_average_value_usd
+lowest_bottom_three_value,5,Qatar,226974.45739999998,1,-8,False,bottom_3_average_value_usd
+lowest_bottom_three_value,6,Haiti,258234.8816,0,-6,False,bottom_3_average_value_usd
+lowest_bottom_three_value,7,Jordan,297301.192,0,-5,False,bottom_3_average_value_usd
+lowest_bottom_three_value,8,Panama,301367.0508,0,-4,False,bottom_3_average_value_usd
+lowest_bottom_three_value,9,Iraq,398220.3394,0,-11,False,bottom_3_average_value_usd
+lowest_bottom_three_value,10,Uzbekistan,494400.67399999994,0,-9,False,bottom_3_average_value_usd
+most_balanced_core_xi,1,England,2.862794612794613,7,4,True,lineup_imbalance
+most_balanced_core_xi,2,South Africa,3.8994164637950646,4,-1,True,lineup_imbalance
+most_balanced_core_xi,3,Netherlands,5.0285714285714285,7,6,True,lineup_imbalance
+most_balanced_core_xi,4,Germany,5.233393177737882,6,6,True,lineup_imbalance
+most_balanced_core_xi,5,France,5.4586894586894585,9,8,True,lineup_imbalance
+most_balanced_core_xi,6,Japan,5.905511811023622,5,4,True,lineup_imbalance
+most_balanced_core_xi,7,Mexico,6.109589041095891,9,6,True,lineup_imbalance
+most_balanced_core_xi,8,Saudi Arabia,6.187925047080418,2,-4,False,lineup_imbalance
+most_balanced_core_xi,9,Iraq,6.396810378490677,0,-11,False,lineup_imbalance
+most_balanced_core_xi,10,Morocco,6.878048780487805,7,3,True,lineup_imbalance
+most_top_heavy_core_xi,1,Egypt,59.17330729091424,5,2,True,lineup_imbalance
+most_top_heavy_core_xi,2,Ecuador,51.795918367346935,4,0,True,lineup_imbalance
+most_top_heavy_core_xi,3,Uzbekistan,47.60183640040912,0,-9,False,lineup_imbalance
+most_top_heavy_core_xi,4,Colombia,47.354838709677416,7,3,True,lineup_imbalance
+most_top_heavy_core_xi,5,Uruguay,41.29545454545455,2,-1,False,lineup_imbalance
+most_top_heavy_core_xi,6,Sweden,40.685052101418016,4,0,True,lineup_imbalance
+most_top_heavy_core_xi,7,Ghana,35.97589375,4,0,True,lineup_imbalance
+most_top_heavy_core_xi,8,Haiti,35.18804254366851,0,-6,False,lineup_imbalance
+most_top_heavy_core_xi,9,Algeria,33.266666666666666,4,-2,True,lineup_imbalance
+most_top_heavy_core_xi,10,Congo DR,31.045454545454547,4,1,True,lineup_imbalance
+biggest_overperformers_relative_to_value,1,Mexico,5.1618218020534385,9,6,True,Actual points minus expected points from log total XI value.
+biggest_overperformers_relative_to_value,2,South Africa,3.026269575688179,4,-1,True,Actual points minus expected points from log total XI value.
+biggest_overperformers_relative_to_value,3,Argentina,2.8461572725276127,9,7,True,Actual points minus expected points from log total XI value.
+biggest_overperformers_relative_to_value,4,IR Iran,2.3149497797016885,3,0,False,Actual points minus expected points from log total XI value.
+biggest_overperformers_relative_to_value,5,France,2.2215895652782436,9,8,True,Actual points minus expected points from log total XI value.
+biggest_overperformers_relative_to_value,6,Switzerland,2.1318155827656824,7,4,True,Actual points minus expected points from log total XI value.
+biggest_overperformers_relative_to_value,7,Cabo Verde,2.075912667029897,3,0,True,Actual points minus expected points from log total XI value.
+biggest_overperformers_relative_to_value,8,Colombia,1.9952539894054198,7,3,True,Actual points minus expected points from log total XI value.
+biggest_overperformers_relative_to_value,9,Morocco,1.4534101416972085,7,3,True,Actual points minus expected points from log total XI value.
+biggest_overperformers_relative_to_value,10,USA,1.0298523350689983,6,4,True,Actual points minus expected points from log total XI value.
+biggest_underperformers_relative_to_value,1,Uzbekistan,-3.4913882812712522,0,-9,False,Actual points minus expected points from log total XI value.
+biggest_underperformers_relative_to_value,2,Uruguay,-3.254924690176118,2,-1,False,Actual points minus expected points from log total XI value.
+biggest_underperformers_relative_to_value,3,Czechia,-3.1746269712965542,1,-4,False,Actual points minus expected points from log total XI value.
+biggest_underperformers_relative_to_value,4,Tunisia,-2.826130458177868,0,-10,False,Actual points minus expected points from log total XI value.
+biggest_underperformers_relative_to_value,5,Türkiye,-2.6163634485690395,3,-2,False,Actual points minus expected points from log total XI value.
+biggest_underperformers_relative_to_value,6,Haiti,-2.4299720354730674,0,-6,False,Actual points minus expected points from log total XI value.
+biggest_underperformers_relative_to_value,7,Senegal,-2.1407860714579847,3,2,True,Actual points minus expected points from log total XI value.
+biggest_underperformers_relative_to_value,8,Panama,-1.8282640071486078,0,-4,False,Actual points minus expected points from log total XI value.
+biggest_underperformers_relative_to_value,9,Ecuador,-1.5701265796983357,4,0,True,Actual points minus expected points from log total XI value.
+biggest_underperformers_relative_to_value,10,Sweden,-1.5425597040315573,4,0,True,Actual points minus expected points from log total XI value.

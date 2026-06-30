@@ -1,0 +1,37 @@
+outcome,predictor,method,n,correlation,p_value,notes
+points,core_xi_total_value_usd,pearson,48,0.6807636136693249,,Group position is ordinal; negative correlation means stronger predictor values align with better positions.
+points,core_xi_total_value_usd,spearman,48,0.7186413265064171,,Spearman uses rank order.
+points,core_xi_average_value_usd,pearson,48,0.6807636136693249,,Group position is ordinal; negative correlation means stronger predictor values align with better positions.
+points,core_xi_average_value_usd,spearman,48,0.7186413265064171,,Spearman uses rank order.
+points,top_3_average_value_usd,pearson,48,0.6680520783359959,,Group position is ordinal; negative correlation means stronger predictor values align with better positions.
+points,top_3_average_value_usd,spearman,48,0.6994036386643313,,Spearman uses rank order.
+points,bottom_3_average_value_usd,pearson,48,0.5357396975226285,,Group position is ordinal; negative correlation means stronger predictor values align with better positions.
+points,bottom_3_average_value_usd,spearman,48,0.7707684085515704,,Spearman uses rank order.
+points,core_xi_median_value_usd,pearson,48,0.6440742693775611,,Group position is ordinal; negative correlation means stronger predictor values align with better positions.
+points,core_xi_median_value_usd,spearman,48,0.7532169999220825,,Spearman uses rank order.
+points,lineup_imbalance,pearson,48,-0.2063472769747159,,Group position is ordinal; negative correlation means stronger predictor values align with better positions.
+points,lineup_imbalance,spearman,48,-0.284954809517851,,Spearman uses rank order.
+goal_difference,core_xi_total_value_usd,pearson,48,0.6688550214437063,,Group position is ordinal; negative correlation means stronger predictor values align with better positions.
+goal_difference,core_xi_total_value_usd,spearman,48,0.7040703706343863,,Spearman uses rank order.
+goal_difference,core_xi_average_value_usd,pearson,48,0.6688550214437062,,Group position is ordinal; negative correlation means stronger predictor values align with better positions.
+goal_difference,core_xi_average_value_usd,spearman,48,0.7040703706343863,,Spearman uses rank order.
+goal_difference,top_3_average_value_usd,pearson,48,0.6501898632786123,,Group position is ordinal; negative correlation means stronger predictor values align with better positions.
+goal_difference,top_3_average_value_usd,spearman,48,0.6811211547649074,,Spearman uses rank order.
+goal_difference,bottom_3_average_value_usd,pearson,48,0.5113287154350954,,Group position is ordinal; negative correlation means stronger predictor values align with better positions.
+goal_difference,bottom_3_average_value_usd,spearman,48,0.7512657279576118,,Spearman uses rank order.
+goal_difference,core_xi_median_value_usd,pearson,48,0.6437563000392025,,Group position is ordinal; negative correlation means stronger predictor values align with better positions.
+goal_difference,core_xi_median_value_usd,spearman,48,0.7337760815166677,,Spearman uses rank order.
+goal_difference,lineup_imbalance,pearson,48,-0.18756905640376562,,Group position is ordinal; negative correlation means stronger predictor values align with better positions.
+goal_difference,lineup_imbalance,spearman,48,-0.2883086704609967,,Spearman uses rank order.
+group_position,core_xi_total_value_usd,pearson,48,-0.6204738434210437,,Group position is ordinal; negative correlation means stronger predictor values align with better positions.
+group_position,core_xi_total_value_usd,spearman,48,-0.6254611846016784,,Spearman uses rank order.
+group_position,core_xi_average_value_usd,pearson,48,-0.620473843421044,,Group position is ordinal; negative correlation means stronger predictor values align with better positions.
+group_position,core_xi_average_value_usd,spearman,48,-0.6254611846016784,,Spearman uses rank order.
+group_position,top_3_average_value_usd,pearson,48,-0.5875189289715723,,Group position is ordinal; negative correlation means stronger predictor values align with better positions.
+group_position,top_3_average_value_usd,spearman,48,-0.6005935444373232,,Spearman uses rank order.
+group_position,bottom_3_average_value_usd,pearson,48,-0.5118404707324334,,Group position is ordinal; negative correlation means stronger predictor values align with better positions.
+group_position,bottom_3_average_value_usd,spearman,48,-0.6752840446632689,,Spearman uses rank order.
+group_position,core_xi_median_value_usd,pearson,48,-0.6173101365641039,,Group position is ordinal; negative correlation means stronger predictor values align with better positions.
+group_position,core_xi_median_value_usd,spearman,48,-0.6659942845826639,,Spearman uses rank order.
+group_position,lineup_imbalance,pearson,48,0.21356758060506886,,Group position is ordinal; negative correlation means stronger predictor values align with better positions.
+group_position,lineup_imbalance,spearman,48,0.2851564970657114,,Spearman uses rank order.

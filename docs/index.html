@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026 World Cup Weakest-Link Analysis</title>
+  <meta name="description" content="A portfolio case study testing whether lineup floor is associated with World Cup group-stage performance.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Weakest-Link Analysis</a>
+    <nav aria-label="Primary navigation">
+      <a href="#findings">Findings</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="data.html">Data</a>
+      <a href="https://github.com/BelmirSmajic/2026-world-cup-weakest-link">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">2026 World Cup data analytics portfolio project</p>
+        <h1>Does lineup floor track performance better than star power?</h1>
+        <p class="lede">A Core XI valuation study across 48 teams and 528 players, focused on each team's three lowest-valued starters.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#findings">View findings</a>
+          <a class="button" href="data.html">Download data</a>
+        </div>
+      </div>
+      <div class="hero-panel" aria-label="Project validation summary">
+        <span>Built by Belmir Smajic</span>
+        <strong>528 / 528</strong>
+        <span>Core XI players valued</span>
+      </div>
+    </section>
+
+    <section class="metric-grid" aria-label="Key project metrics">
+      <article><strong>48</strong><span>teams</span></article>
+      <article><strong>528</strong><span>Core XI players</span></article>
+      <article><strong>100%</strong><span>valuation coverage</span></article>
+      <article><strong>0</strong><span>missing values</span></article>
+    </section>
+
+    <section class="section" id="question">
+      <div class="section-heading">
+        <p class="eyebrow">Core question</p>
+        <h2>Total value can hide a thin lineup floor.</h2>
+      </div>
+      <p>Star-player value and total Core XI value often describe a team's ceiling. This project asks whether the opposite edge of the lineup, the least expensive starters, is more revealing of group-stage resilience.</p>
+    </section>
+
+    <section class="section" id="findings">
+      <div class="section-heading">
+        <p class="eyebrow">Main findings</p>
+        <h2>Bottom-three value separated several broad tiers.</h2>
+      </div>
+      <div class="chart-grid">
+        <article class="chart-card">
+          <h3>Weakest lineup floors</h3>
+          <div id="weakest-chart" class="chart"></div>
+        </article>
+        <article class="chart-card">
+          <h3>Strongest lineup floors</h3>
+          <div id="strongest-chart" class="chart"></div>
+        </article>
+        <article class="chart-card wide">
+          <h3>Bottom-three value vs group-stage points</h3>
+          <div id="scatter-chart" class="chart scatter"></div>
+        </article>
+        <article class="chart-card">
+          <h3>Advancement by lineup-floor quartile</h3>
+          <div id="quartile-chart" class="chart"></div>
+        </article>
+        <article class="chart-card">
+          <h3>Total Core XI value vs floor value</h3>
+          <div id="total-vs-floor-chart" class="chart scatter"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split">
+      <div>
+        <p class="eyebrow">Source sensitivity</p>
+        <h2>Manual and Transfermarkt fallback rows did not overturn the broad result.</h2>
+        <p>Excluding Transfermarkt/manual fallback rows removed 32 player values across 15 teams and left 33 complete teams. The weakest-link top-ten overlap was 8/10.</p>
+      </div>
+      <div class="note-card">
+        <strong>Interpretation</strong>
+        <p>Lineup floor is associated with performance in this sample. It should not be read as a causal model or a standalone prediction engine.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Tableau</p>
+        <h2>Tableau-ready data</h2>
+      </div>
+      <div class="tableau-card">
+        <span>Tableau Public link coming soon</span>
+        <a class="button" href="data.html">Use the Tableau-ready CSV</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Copyright Belmir Smajic</span>
+    <a href="methodology.html">Methodology</a>
+    <a href="data.html">Data downloads</a>
+  </footer>
+  <script src="assets/site-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

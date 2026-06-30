@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Methodology | 2026 World Cup Weakest-Link Analysis</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Weakest-Link Analysis</a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html#findings">Findings</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="data.html">Data</a>
+      <a href="https://github.com/BelmirSmajic/2026-world-cup-weakest-link">GitHub</a>
+    </nav>
+  </header>
+  <main class="page">
+    <section class="section">
+      <p class="eyebrow">Methodology</p>
+      <h1>How the lineup-floor metric was built</h1>
+      <div class="method-list">
+        <article><h2>1. Core XI reconstruction</h2><p>Players were ranked within each team by minutes, starts, appearances, and a deterministic name tie-breaker. The top 11 formed the Core XI.</p></article>
+        <article><h2>2. Player valuation</h2><p>FootballTransfers was the primary source. FotMob/SciSports was the first fallback. Transfermarkt and manually verified indexed records filled final gaps. Source flags remain in the dataset.</p></article>
+        <article><h2>3. Currency conversion</h2><p>EUR values were converted to USD using the established rate: 1 EUR = 1.1406 USD. Full precision is retained in the CSV files.</p></article>
+        <article><h2>4. Weakest-link calculation</h2><p>Each Core XI was ranked by USD player value. The main metric is the average value of the three lowest-valued Core XI players.</p></article>
+        <article><h2>5. Performance comparison</h2><p>Lineup-floor value, total Core XI value, top-three average value, and lineup imbalance were compared with points, goal difference, group position, and advancement.</p></article>
+      </div>
+    </section>
+    <section class="section">
+      <h2>Limitations</h2>
+      <ul class="clean-list">
+        <li>Mixed valuation providers use different models and update schedules.</li>
+        <li>Fallback-source rows improve coverage but make low-end exact ordering less certain.</li>
+        <li>Core XI is reconstructed from observed tournament usage rather than announced pre-tournament intent.</li>
+        <li>The analysis is associative and descriptive, not causal.</li>
+      </ul>
+    </section>
+  </main>
+  <footer><span>Copyright Belmir Smajic</span><a href="index.html">Home</a><a href="data.html">Data</a></footer>
+</body>
+</html>

@@ -1,0 +1,7 @@
+check,observed,expected,passed
+valued_players,528,528,True
+complete_teams,48,48,True
+missing_values,0,0,True
+duplicate_player_rows,0,0,True
+usd_conversion_bad_rows,0,0,True
+source_or_flag_bad_rows,0,0,True

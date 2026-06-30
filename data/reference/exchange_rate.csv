@@ -1,0 +1,2 @@
+exchange_rate_date,eur_to_usd,source,source_url,retrieval_date,notes
+2026-06-29,1.1406,European Central Bank euro foreign exchange reference rates,https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist.zip,2026-06-29,Selected latest ECB EUR/USD rate available on or before 2026-06-29.
