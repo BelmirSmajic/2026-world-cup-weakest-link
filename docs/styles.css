@@ -117,7 +117,7 @@ nav a:hover { color: var(--text); }
   gap: 1rem;
 }
 .table-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.explain-grid article, .story-grid article, .table-card { padding: 1rem; }
+.explain-grid article, .story-grid article, .table-card { min-width: 0; padding: 1rem; }
 .explain-grid strong, .story-grid strong, .note-card strong { display: block; margin-bottom: .35rem; color: var(--text); }
 .case-story blockquote {
   max-width: 68rem;
@@ -191,11 +191,12 @@ nav a:hover { color: var(--text); }
 }
 .download-grid a { display: grid; gap: .4rem; padding: 1rem; text-decoration: none; }
 .download-grid span { color: var(--muted); }
-table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: .95rem; }
 th, td { padding: .7rem .55rem; border-bottom: 1px solid var(--line); text-align: left; }
 th { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
 td { color: var(--text); }
 td:nth-child(3), td:nth-child(4) { white-space: nowrap; }
+td:nth-child(2), td:nth-child(5) { overflow-wrap: anywhere; }
 footer {
   display: flex;
   gap: 1rem;
@@ -226,4 +227,7 @@ footer {
   .chart-card { padding: .75rem; }
   table { font-size: .86rem; }
   th, td { padding: .55rem .35rem; }
+  th:first-child, td:first-child { width: 2.4rem; }
+  th:nth-child(3), td:nth-child(3) { width: 4.8rem; }
+  th:nth-child(4), td:nth-child(4) { width: 3.3rem; }
 }
