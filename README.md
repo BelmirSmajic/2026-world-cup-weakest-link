@@ -2,7 +2,9 @@
 
 **Thesis:** A national team's lowest-valued Core XI starters may reveal lineup fragility that total lineup value and star-player value can conceal.
 
-[View the GitHub Pages case study](https://BelmirSmajic.github.io/2026-world-cup-weakest-link/)
+[Read the Medium article](https://medium.com/@belmirsmajic/a-team-is-only-as-strong-as-the-bottom-of-its-lineup-491d8825fed4)  
+[Explore the Tableau dashboard](https://public.tableau.com/app/profile/belmir.smajic/viz/2026WorldCupanalyticalcasestudy/Home)  
+[View the full case study](https://belmirsmajic.github.io/2026-world-cup-weakest-link/)
 
 ## Executive Summary
 
@@ -110,7 +112,7 @@ Limitations:
 
 The case-study site is designed for GitHub Pages from the `/docs` folder:
 
-https://BelmirSmajic.github.io/2026-world-cup-weakest-link/
+https://belmirsmajic.github.io/2026-world-cup-weakest-link/
 
 ## Repository Structure
 

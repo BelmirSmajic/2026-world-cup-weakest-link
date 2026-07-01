@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<workbook original-version="2026.2" source-build="2026.2.783" source-platform="win" version="2026.2" xmlns:user="http://www.tableausoftware.com/xml/user">
+  <preferences>
+    <preference name="ui.encoding.shelf.height" value="24" />
+    <preference name="ui.shelf.height" value="26" />
+  </preferences>
+  <datasources>
+    <datasource caption="team_dashboard" inline="true" name="team_dashboard" version="2026.2">
+      <connection class="textscan" directory="Data" filename="team_dashboard.csv" server="">
+        <relation name="team_dashboard.csv" table="[team_dashboard#csv]" type="table" />
+      </connection>
+      <column caption="Team" datatype="string" name="[team]" role="dimension" type="nominal" />
+      <column caption="Group" datatype="string" name="[group]" role="dimension" type="nominal" />
+      <column caption="Core Xi Total Value Usd" datatype="real" name="[core_xi_total_value_usd]" role="measure" type="quantitative" />
+      <column caption="Core Xi Average Value Usd" datatype="real" name="[core_xi_average_value_usd]" role="measure" type="quantitative" />
+      <column caption="Bottom 3 Average Value Usd" datatype="real" name="[bottom_3_average_value_usd]" role="measure" type="quantitative" />
+      <column caption="Top 3 Average Value Usd" datatype="real" name="[top_3_average_value_usd]" role="measure" type="quantitative" />
+      <column caption="Lineup Imbalance" datatype="real" name="[lineup_imbalance]" role="measure" type="quantitative" />
+      <column caption="Points" datatype="integer" name="[points]" role="measure" type="quantitative" />
+      <column caption="Goal Difference" datatype="integer" name="[goal_difference]" role="measure" type="quantitative" />
+      <column caption="Group Position" datatype="integer" name="[group_position]" role="measure" type="quantitative" />
+      <column caption="Advanced Flag" datatype="boolean" name="[advanced_flag]" role="dimension" type="nominal" />
+      <column caption="Qualification Type" datatype="string" name="[qualification_type]" role="dimension" type="nominal" />
+      <column caption="Advanced Status" datatype="string" name="[advanced_status]" role="dimension" type="nominal" />
+      <column caption="Lineup Floor Rank" datatype="integer" name="[lineup_floor_rank]" role="measure" type="quantitative" />
+      <column caption="Total Value Rank" datatype="integer" name="[total_value_rank]" role="measure" type="quantitative" />
+      <column caption="Top Three Rank" datatype="integer" name="[top_three_rank]" role="measure" type="quantitative" />
+      <column caption="Lineup Floor Rank Label" datatype="string" name="[lineup_floor_rank_label]" role="dimension" type="nominal" />
+      <column caption="Total Value Rank Label" datatype="string" name="[total_value_rank_label]" role="dimension" type="nominal" />
+      <column caption="Bottom 3 Value M" datatype="real" name="[bottom_3_value_m]" role="measure" type="quantitative" />
+      <column caption="Core Xi Total Value M" datatype="real" name="[core_xi_total_value_m]" role="measure" type="quantitative" />
+      <column caption="Top 3 Value M" datatype="real" name="[top_3_value_m]" role="measure" type="quantitative" />
+      <column caption="Bottom 3 Value Label" datatype="string" name="[bottom_3_value_label]" role="dimension" type="nominal" />
+      <column caption="Core Xi Total Value Label" datatype="string" name="[core_xi_total_value_label]" role="dimension" type="nominal" />
+      <column caption="Top 3 Value Label" datatype="string" name="[top_3_value_label]" role="dimension" type="nominal" />
+      <column caption="Notable Label" datatype="string" name="[notable_label]" role="dimension" type="nominal" />
+      <column caption="Lineup Floor Quartile" datatype="string" name="[lineup_floor_quartile]" role="dimension" type="nominal" />
+      <column caption="Selected Contrast Note" datatype="string" name="[selected_contrast_note]" role="dimension" type="nominal" />
+      <aliases enabled="yes" />
+    </datasource>
+
+    <datasource caption="quartile_dashboard" inline="true" name="quartile_dashboard" version="2026.2">
+      <connection class="textscan" directory="Data" filename="quartile_dashboard.csv" server="">
+        <relation name="quartile_dashboard.csv" table="[quartile_dashboard#csv]" type="table" />
+      </connection>
+      <column caption="Lineup Floor Quartile" datatype="string" name="[lineup_floor_quartile]" role="dimension" type="nominal" />
+      <column caption="Teams" datatype="integer" name="[teams]" role="measure" type="quantitative" />
+      <column caption="Advanced Teams" datatype="integer" name="[advanced_teams]" role="measure" type="quantitative" />
+      <column caption="Advancement Rate" datatype="real" name="[advancement_rate]" role="measure" type="quantitative" />
+      <column caption="Avg Points" datatype="real" name="[avg_points]" role="measure" type="quantitative" />
+      <column caption="Avg Goal Difference" datatype="real" name="[avg_goal_difference]" role="measure" type="quantitative" />
+      <column caption="Avg Bottom Three Value Usd" datatype="real" name="[avg_bottom_three_value_usd]" role="measure" type="quantitative" />
+      <column caption="Quartile Order" datatype="integer" name="[quartile_order]" role="measure" type="quantitative" />
+      <column caption="Advanced Count Label" datatype="string" name="[advanced_count_label]" role="dimension" type="nominal" />
+      <column caption="Advancement Rate Label" datatype="string" name="[advancement_rate_label]" role="dimension" type="nominal" />
+      <aliases enabled="yes" />
+    </datasource>
+
+    <datasource caption="metric_dashboard" inline="true" name="metric_dashboard" version="2026.2">
+      <connection class="textscan" directory="Data" filename="metric_dashboard.csv" server="">
+        <relation name="metric_dashboard.csv" table="[metric_dashboard#csv]" type="table" />
+      </connection>
+      <column caption="Metric" datatype="string" name="[metric]" role="dimension" type="nominal" />
+      <column caption="Metric Short" datatype="string" name="[metric_short]" role="dimension" type="nominal" />
+      <column caption="Spearman Vs Points" datatype="real" name="[spearman_vs_points]" role="measure" type="quantitative" />
+      <column caption="Rank" datatype="integer" name="[rank]" role="measure" type="quantitative" />
+      <aliases enabled="yes" />
+    </datasource>
+
+    <datasource caption="core_xi_dashboard" inline="true" name="core_xi_dashboard" version="2026.2">
+      <connection class="textscan" directory="Data" filename="core_xi_dashboard.csv" server="">
+        <relation name="core_xi_dashboard.csv" table="[core_xi_dashboard#csv]" type="table" />
+      </connection>
+      <column caption="Team" datatype="string" name="[team]" role="dimension" type="nominal" />
+      <column caption="Group" datatype="string" name="[group]" role="dimension" type="nominal" />
+      <column caption="Player" datatype="string" name="[player]" role="dimension" type="nominal" />
+      <column caption="Position" datatype="string" name="[position]" role="dimension" type="nominal" />
+      <column caption="Position.1" datatype="string" name="[position.1]" role="dimension" type="nominal" />
+      <column caption="Club" datatype="string" name="[club]" role="dimension" type="nominal" />
+      <column caption="Minutes" datatype="integer" name="[minutes]" role="measure" type="quantitative" />
+      <column caption="Starts" datatype="integer" name="[starts]" role="measure" type="quantitative" />
+      <column caption="Core Xi Rank By Minutes" datatype="integer" name="[core_xi_rank_by_minutes]" role="measure" type="quantitative" />
+      <column caption="Market Value Original" datatype="real" name="[market_value_original]" role="measure" type="quantitative" />
+      <column caption="Currency" datatype="string" name="[currency]" role="dimension" type="nominal" />
+      <column caption="Footballtransfers Etv Eur" datatype="real" name="[footballtransfers_etv_eur]" role="measure" type="quantitative" />
+      <column caption="Footballtransfers Etv Usd" datatype="real" name="[footballtransfers_etv_usd]" role="measure" type="quantitative" />
+      <column caption="Valuation Date" datatype="date" name="[valuation_date]" role="dimension" type="ordinal" />
+      <column caption="Valuation Source Url" datatype="string" name="[valuation_source_url]" role="dimension" type="nominal" />
+      <column caption="Eur Usd Rate" datatype="real" name="[eur_usd_rate]" role="measure" type="quantitative" />
+      <column caption="Exchange Rate Date" datatype="date" name="[exchange_rate_date]" role="dimension" type="ordinal" />
+      <column caption="Exchange Rate Source" datatype="string" name="[exchange_rate_source]" role="dimension" type="nominal" />
+      <column caption="Value Source" datatype="string" name="[value_source]" role="dimension" type="nominal" />
+      <column caption="Value Source Url" datatype="string" name="[value_source_url]" role="dimension" type="nominal" />
+      <column caption="Value Method" datatype="string" name="[value_method]" role="dimension" type="nominal" />
+      <column caption="Valuation Date Verified" datatype="boolean" name="[valuation_date_verified]" role="dimension" type="nominal" />
+      <column caption="Is Fallback Value" datatype="boolean" name="[is_fallback_value]" role="dimension" type="nominal" />
+      <column caption="Market Value Usd" datatype="real" name="[market_value_usd]" role="measure" type="quantitative" />
+      <column caption="Player Value Rank Within Team" datatype="integer" name="[player_value_rank_within_team]" role="measure" type="quantitative" />
+      <column caption="Bottom Three Flag" datatype="boolean" name="[bottom_three_flag]" role="dimension" type="nominal" />
+      <column caption="Top Three Flag" datatype="boolean" name="[top_three_flag]" role="dimension" type="nominal" />
+      <column caption="Core Xi Total Value Usd" datatype="real" name="[core_xi_total_value_usd]" role="measure" type="quantitative" />
+      <column caption="Core Xi Average Value Usd" datatype="real" name="[core_xi_average_value_usd]" role="measure" type="quantitative" />
+      <column caption="Bottom 3 Average Value Usd" datatype="real" name="[bottom_3_average_value_usd]" role="measure" type="quantitative" />
+      <column caption="Top 3 Average Value Usd" datatype="real" name="[top_3_average_value_usd]" role="measure" type="quantitative" />
+      <column caption="Lineup Imbalance" datatype="real" name="[lineup_imbalance]" role="measure" type="quantitative" />
+      <column caption="Points" datatype="integer" name="[points]" role="measure" type="quantitative" />
+      <column caption="Goal Difference" datatype="integer" name="[goal_difference]" role="measure" type="quantitative" />
+      <column caption="Group Position" datatype="integer" name="[group_position]" role="measure" type="quantitative" />
+      <column caption="Advanced Flag" datatype="boolean" name="[advanced_flag]" role="dimension" type="nominal" />
+      <column caption="Qualification Type" datatype="string" name="[qualification_type]" role="dimension" type="nominal" />
+      <column caption="Advanced Status" datatype="string" name="[advanced_status]" role="dimension" type="nominal" />
+      <column caption="Lineup Floor Player" datatype="string" name="[lineup_floor_player]" role="dimension" type="nominal" />
+      <column caption="Market Value Usd M" datatype="real" name="[market_value_usd_m]" role="measure" type="quantitative" />
+      <column caption="Market Value Usd Label" datatype="string" name="[market_value_usd_label]" role="dimension" type="nominal" />
+      <aliases enabled="yes" />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name="01 KPI Cards">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="metric_dashboard" name="metric_dashboard" />
+          </datasources>
+          <aggregation value="true" />
+        </view>
+        <style>
+          <style-rule element="worksheet">
+            <format attr="font-family" value="Tableau Book" />
+            <format attr="color" value="#eef4ff" />
+          </style-rule>
+        </style>
+        <rows>[spearman_vs_points]</rows>
+        <cols>[metric_short]</cols>
+      </table>
+      <simple-id uuid="{01-kpi-cards}" />
+    </worksheet>
+
+    <worksheet name="02 Lineup Floor Scatter">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="team_dashboard" name="team_dashboard" />
+          </datasources>
+          <aggregation value="true" />
+        </view>
+        <style>
+          <style-rule element="worksheet">
+            <format attr="font-family" value="Tableau Book" />
+            <format attr="color" value="#eef4ff" />
+          </style-rule>
+        </style>
+        <rows>[points]</rows>
+        <cols>[bottom_3_average_value_usd]</cols>
+      </table>
+      <simple-id uuid="{02-lineup-floor-scatter}" />
+    </worksheet>
+
+    <worksheet name="03 Advancement By Quartile">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="quartile_dashboard" name="quartile_dashboard" />
+          </datasources>
+          <aggregation value="true" />
+        </view>
+        <style>
+          <style-rule element="worksheet">
+            <format attr="font-family" value="Tableau Book" />
+            <format attr="color" value="#eef4ff" />
+          </style-rule>
+        </style>
+        <rows>[advancement_rate]</rows>
+        <cols>[lineup_floor_quartile]</cols>
+      </table>
+      <simple-id uuid="{03-advancement-by-quartile}" />
+    </worksheet>
+
+    <worksheet name="04 Metric Comparison">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="metric_dashboard" name="metric_dashboard" />
+          </datasources>
+          <aggregation value="true" />
+        </view>
+        <style>
+          <style-rule element="worksheet">
+            <format attr="font-family" value="Tableau Book" />
+            <format attr="color" value="#eef4ff" />
+          </style-rule>
+        </style>
+        <rows>[metric]</rows>
+        <cols>[spearman_vs_points]</cols>
+      </table>
+      <simple-id uuid="{04-metric-comparison}" />
+    </worksheet>
+
+    <worksheet name="05 Rank Comparison">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="team_dashboard" name="team_dashboard" />
+          </datasources>
+          <aggregation value="true" />
+        </view>
+        <style>
+          <style-rule element="worksheet">
+            <format attr="font-family" value="Tableau Book" />
+            <format attr="color" value="#eef4ff" />
+          </style-rule>
+        </style>
+        <rows>[lineup_floor_rank]</rows>
+        <cols>[team]</cols>
+      </table>
+      <simple-id uuid="{05-rank-comparison}" />
+    </worksheet>
+
+    <worksheet name="06 Core XI Detail">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="core_xi_dashboard" name="core_xi_dashboard" />
+          </datasources>
+          <aggregation value="true" />
+        </view>
+        <style>
+          <style-rule element="worksheet">
+            <format attr="font-family" value="Tableau Book" />
+            <format attr="color" value="#eef4ff" />
+          </style-rule>
+        </style>
+        <rows>[market_value_usd]</rows>
+        <cols>[player]</cols>
+      </table>
+      <simple-id uuid="{06-core-xi-detail}" />
+    </worksheet>
+
+    <worksheet name="07 Strongest Weakest Tables">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="team_dashboard" name="team_dashboard" />
+          </datasources>
+          <aggregation value="true" />
+        </view>
+        <style>
+          <style-rule element="worksheet">
+            <format attr="font-family" value="Tableau Book" />
+            <format attr="color" value="#eef4ff" />
+          </style-rule>
+        </style>
+        <rows>[bottom_3_average_value_usd]</rows>
+        <cols>[lineup_floor_rank]</cols>
+      </table>
+      <simple-id uuid="{07-strongest-weakest-tables}" />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name="A Team Is Only as Strong as the Bottom of Its Lineup">
+      <style>
+        <style-rule element="dashboard">
+          <format attr="background-color" value="#0d1117" />
+          <format attr="color" value="#eef4ff" />
+        </style-rule>
+      </style>
+      <size maxheight="900" maxwidth="1200" minheight="900" minwidth="1200" />
+      <zones>
+        <zone h="900" id="1" type="layout-basic" w="1200" x="0" y="0">
+          <zone h="110" id="2" name="01 KPI Cards" type="worksheet" w="1200" x="0" y="0" />
+          <zone h="300" id="3" name="02 Lineup Floor Scatter" type="worksheet" w="760" x="0" y="110" />
+          <zone h="145" id="4" name="03 Advancement By Quartile" type="worksheet" w="420" x="780" y="110" />
+          <zone h="145" id="5" name="04 Metric Comparison" type="worksheet" w="420" x="780" y="265" />
+          <zone h="170" id="6" name="05 Rank Comparison" type="worksheet" w="560" x="0" y="430" />
+          <zone h="250" id="7" name="06 Core XI Detail" type="worksheet" w="620" x="580" y="430" />
+          <zone h="230" id="8" name="07 Strongest Weakest Tables" type="worksheet" w="1200" x="0" y="620" />
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height="900" source-width="1200">
+    <window class="dashboard" maximized="true" name="A Team Is Only as Strong as the Bottom of Its Lineup">
+      <viewpoints />
+    </window>
+  </windows>
+</workbook>
